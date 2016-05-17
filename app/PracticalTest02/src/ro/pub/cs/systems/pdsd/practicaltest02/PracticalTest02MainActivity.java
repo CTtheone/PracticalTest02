@@ -82,15 +82,6 @@ public class PracticalTest02MainActivity extends Activity {
         public void onClick(View view) {
             String clientAddress = clientAddressEditText.getText().toString();
             String clientPort    = clientPortEditText.getText().toString();
-            if (clientAddress == null || clientAddress.isEmpty() ||
-                    clientPort == null || clientPort.isEmpty()) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        "Client connection parameters should be filled!",
-                        Toast.LENGTH_SHORT
-                ).show();
-                return;
-            }
 
             if (serverThread == null || !serverThread.isAlive()) {
                 Log.e(Constants.TAG, "[MAIN ACTIVITY] There is no server to connect to!");

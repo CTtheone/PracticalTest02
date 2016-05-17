@@ -52,6 +52,9 @@ public class CommunicationThread extends Thread {
                 			}
                 			printWriter.println(result);
                 			printWriter.flush();
+                    	} else {
+                    		printWriter.println("None");
+                			printWriter.flush();
                     	}
                     	
                     } else if (command.equals("put")) {
